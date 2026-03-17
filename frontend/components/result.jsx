@@ -12,9 +12,11 @@ const Result = () => {
   return (
     <div className='px-6 py-5'>
       <h1 className='font-medium text-2xl mb-2 font-playpen'>Result of your calculation</h1>
-      <p className='font-semibold text-3xl mb-5 font-playpen'>{conversionResult.val}{conversionResult.convertFrom} = {conversionResult.result}{conversionResult.convertTo}</p>
-
-      <form action={() => {navigate('/')}}>
+      {/* <p className='font-semibold text-3xl mb-5 font-playpen'>{conversionResult.val}{conversionResult.convertFrom} = {conversionResult.result}{conversionResult.convertTo}</p> */}
+      <p className='font-semibold text-3xl mb-5 font-playpen [font-variant-ligatures:none]'>
+        {`${conversionResult.val}${conversionResult.convertFrom} = ${conversionResult.result}${conversionResult.convertTo}`}
+      </p>
+      <form action={() => { navigate('/') }}>
         <button className='border-2 px-4 py-1 font-playpen rounded-md hover:bg-blue-500' type="submit">Reset</button>
       </form>
     </div>
