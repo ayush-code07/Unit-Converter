@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Playpen+Sans:wght@400&display=swap');
+
+@import "tailwindcss";
+
+/* 1. Import the fonts from Google */
+
+/* 2. Define your "Theme" variables directly here */
+@theme {
+  --font-comic: "Comic Neue", cursive;
+  --font-playpen: "Playpen Sans", cursive;
+}
