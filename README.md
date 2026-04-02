@@ -1,4 +1,3 @@
-```markdown
 # 🔄 Unit Converter
 
 A full-stack **Unit Converter** web application built with **React** (frontend) and **Node.js + Express** (backend). It supports seamless, real-time conversions across three main categories: Length, Weight, and Temperature.
@@ -121,5 +120,4 @@ Distributed under the MIT License.
 
 ## 👨‍💻 Author
 
-**Ayush Jagnani** — [@ayush-code07](https://github.com/ayush-code07)
-```
+**Ayush Jagnani**
