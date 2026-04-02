@@ -1,4 +1,3 @@
-import React from 'react'
 import { useLocation } from 'react-router'
 import { useNavigate } from 'react-router'
 
@@ -13,6 +12,7 @@ const Result = () => {
     <div className='px-6 py-5'>
       <h1 className='font-medium text-2xl mb-2 font-playpen'>Result of your calculation</h1>
       {/* <p className='font-semibold text-3xl mb-5 font-playpen'>{conversionResult.val}{conversionResult.convertFrom} = {conversionResult.result}{conversionResult.convertTo}</p> */}
+      {/* HERE THE LIGATURES IS NONE SO THAT THE FONT IN CONSISTENT */}
       <p className='font-semibold text-3xl mb-5 font-playpen [font-variant-ligatures:none]'>
         {`${conversionResult.val}${conversionResult.convertFrom} = ${conversionResult.result}${conversionResult.convertTo}`}
       </p>

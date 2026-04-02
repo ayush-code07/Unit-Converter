@@ -1,7 +1,3 @@
-import { useState } from 'react'
-import Length from '../components/length'
-import Weight from '../components/weight'
-import Temperature from '../components/temperature'
 import './index.css'
 import { Outlet } from 'react-router'
 import { NavLink } from 'react-router'
