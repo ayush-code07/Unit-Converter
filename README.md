@@ -1,90 +1,85 @@
 ```markdown
 # 🔄 Unit Converter
 
-A full-stack **Unit Converter** web application built with **React** (frontend) and **Node.js + Express** (backend). It supports conversions across three categories: **Length**, **Weight**, and **Temperature**.
-
----
+A full-stack **Unit Converter** web application built with **React** (frontend) and **Node.js + Express** (backend). It supports seamless, real-time conversions across three main categories: Length, Weight, and Temperature.
 
 ## 🚀 Features
 
-- 📏 **Length Conversion** — millimeter, centimeter, meter, kilometer, inch, foot, yard, mile
-- ⚖️ **Weight Conversion** — milligram, gram, kilogram, ounce, pound
-- 🌡️ **Temperature Conversion** — Celsius, Fahrenheit, Kelvin
-- ⚡ Fast and responsive UI built with **React + Tailwind CSS**
-- 🔗 Client-Server architecture with a **REST API** backend
-
----
+* 📏 **Length Conversion** – Millimeter, centimeter, meter, kilometer, inch, foot, yard, mile.
+* ⚖️ **Weight Conversion** – Milligram, gram, kilogram, ounce, pound.
+* 🌡️ **Temperature Conversion** – Celsius, Fahrenheit, Kelvin.
+* ⚡ **Fast UI** – Responsive, modern interface built with React and Tailwind CSS v4.
+* 🔗 **RESTful API** – Dedicated backend for handling precise conversion logic.
 
 ## 🛠️ Tech Stack
 
-| Layer     | Technology                        |
-|-----------|-----------------------------------|
-| Frontend  | React, Vite, React Router, Tailwind CSS |
-| Backend   | Node.js, Express.js               |
-| Styling   | Tailwind CSS (CDN), Google Fonts  |
-
----
+| Layer | Technology |
+| :--- | :--- |
+| **Frontend** | React, Vite, React Router, Tailwind CSS |
+| **Backend** | Node.js, Express.js |
+| **Styling** | Tailwind CSS v4, Google Fonts |
 
 ## 📁 Project Structure
 
-```
+```text
 Unit-Converter/
 ├── frontend/
 │   ├── src/
-│   │   ├── main.jsx        # App entry point with routing
-│   │   ├── App.jsx         # Root layout with navigation
-│   │   └── index.css
-│   ├── components/
-│   │   ├── length.jsx      # Length conversion form
-│   │   ├── weight.jsx      # Weight conversion form
-│   │   ├── temperature.jsx # Temperature conversion form
-│   │   └── result.jsx      # Displays conversion result
+│   │   ├── components/
+│   │   │   ├── length.jsx      # Length conversion form
+│   │   │   ├── weight.jsx      # Weight conversion form
+│   │   │   ├── temperature.jsx # Temperature conversion form
+│   │   │   └── result.jsx      # Displays conversion result
+│   │   ├── main.jsx            # App entry point with routing
+│   │   ├── App.jsx             # Root layout with navigation
+│   │   └── index.css           # Global styles and Tailwind imports
 │   └── index.html
 ├── backend/
-│   └── app.js              # Express server with conversion logic
+│   └── app.js                  # Express server with conversion logic
 └── README.md
 ```
-
----
 
 ## ⚙️ Getting Started
 
 ### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v18+ recommended)
-- npm
-
----
+* **Node.js** (v18.0.0 or higher)
+* **npm** (comes with Node.js)
 
 ### 🔧 Backend Setup
-
-```bash
-cd backend
-npm install
-node app.js
-```
-
-The backend server will start (default: `http://localhost:3000`).
-
----
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the server:
+   ```bash
+   node app.js
+   ```
+   *The server will run on `http://localhost:3000`.*
 
 ### 💻 Frontend Setup
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-The frontend will start on `http://localhost:5173` (Vite default).
-
----
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   *The app will be available at `http://localhost:5173`.*
 
 ## 🔌 API Endpoints
 
-All endpoints accept a `POST` request with a JSON body.
+All endpoints accept a **POST** request with a JSON body.
 
-### `POST /length`
+### Example Request (`POST /length`)
 ```json
 {
   "val": 100,
@@ -93,88 +88,38 @@ All endpoints accept a `POST` request with a JSON body.
 }
 ```
 
-### `POST /weight`
-```json
-{
-  "val": 500,
-  "convertFrom": "gram",
-  "convertTo": "kilogram"
-}
-```
-
-### `POST /temperature`
+### Example Response
 ```json
 {
   "val": 100,
-  "convertFrom": "Celsius",
-  "convertTo": "Fahrenheit"
+  "convertFrom": "meter",
+  "convertTo": "kilometer",
+  "result": 0.1
 }
 ```
-
-### ✅ Response (all endpoints)
-```json
-{
-  "val": 100,
-  "convertFrom": "Celsius",
-  "convertTo": "Fahrenheit",
-  "result": 212
-}
-```
-
----
 
 ## 🧭 App Routes
 
-| Route          | Component     | Description                  |
-|----------------|---------------|------------------------------|
-| `/length`      | `<Length/>`   | Length unit converter        |
-| `/weight`      | `<Weight/>`   | Weight unit converter        |
-| `/temperature` | `<Temperature/>` | Temperature unit converter |
-| `/result`      | `<Result/>`   | Displays the conversion result |
-
----
-
-## 📸 Screenshots
-
-> _Add screenshots of your app here!_
-
----
+| Route | Component | Description |
+| :--- | :--- | :--- |
+| `/length` | `Length` | Length unit converter interface |
+| `/weight` | `Weight` | Weight unit converter interface |
+| `/temperature` | `Temperature` | Temperature unit converter interface |
+| `/result` | `Result` | Displays the final conversion result |
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to fork the repo and submit a pull request.
-
-1. Fork the project
-2. Create your feature branch: `git checkout -b feature/my-feature`
-3. Commit your changes: `git commit -m 'Add my feature'`
-4. Push to the branch: `git push origin feature/my-feature`
-5. Open a Pull Request
-
----
+1. **Fork** the Project
+2. Create your **Feature Branch** (`git checkout -b feature/AmazingFeature`)
+3. **Commit** your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a **Pull Request**
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
----
+Distributed under the MIT License.
 
 ## 👨‍💻 Author
 
 **Ayush Jagnani** — [@ayush-code07](https://github.com/ayush-code07)
 ```
-
----
-
-### 📝 What's Covered in This README
-
-| Section | Details |
-|---|---|
-| **Features** | All 3 conversion types with supported units |
-| **Tech Stack** | React, Vite, Tailwind, Node.js, Express |
-| **Project Structure** | Accurate folder/file tree from the actual codebase |
-| **Setup Instructions** | Separate steps for frontend & backend |
-| **API Docs** | All 3 POST endpoints with request/response examples |
-| **App Routes** | All 4 React Router routes |
-| **Contributing** | Standard fork & PR guide |
-
-You can copy this directly into a `README.md` file at the root of your project! 🎉
